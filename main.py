@@ -53,8 +53,8 @@ screen = pg.display.set_mode([600, 1000], pg.DOUBLEBUF)
 font = pg.font.Font('FlappyBirdRegular-9Pq0.ttf', 80)
 
 # background
-bg = pg.image.load('assets/bg2.png')
-floor = pg.image.load('assets/floor.png')
+bg = pg.image.load('assets/bg2.png').convert_alpha()
+floor = pg.image.load('assets/floor.png').convert_alpha()
 # =========
 
 # bird
@@ -63,8 +63,8 @@ bird_rect = bird.get_rect(center=(300, 500))
 # =========
 
 # pipe
-pipeup = pg.image.load('assets/pipe_up.png')
-pipedown = pg.image.load('assets/pipe_down.png')
+pipeup = pg.image.load('assets/pipe_up.png').convert_alpha()
+pipedown = pg.image.load('assets/pipe_down.png').convert_alpha()
 pipe_list = []
 NEWPIPE = pg.USEREVENT
 pg.time.set_timer(NEWPIPE, 1500)
@@ -72,12 +72,12 @@ pg.time.set_timer(NEWPIPE, 1500)
 
 
 # death screen
-death = pg.image.load('assets/Death_title.png')
+death = pg.image.load('assets/Death_title.png').convert_alpha()
 death_rect = death.get_rect()
 death_rect = (0, 0)
 
 # movement
-movement = pg.image.load('assets/how_to_start.png')
+movement = pg.image.load('assets/how_to_start.png').convert_alpha()
 movement = pg.transform.scale(movement,(160,200))
 movement_rect = movement.get_rect()
 movement_rect.center = (300, 800)
