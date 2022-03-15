@@ -44,7 +44,7 @@ def rotate_bird(bird):
 
 
 pg.init()
-fps = 60
+fps = 100
 clock = pg.time.Clock()
 pg.display.set_caption('Floppy Bord')
 screen = pg.display.set_mode([600, 1000], pg.DOUBLEBUF)
